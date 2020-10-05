@@ -6,8 +6,10 @@ import PortfolioContext from '../../context/context';
 import Title from '../Title/Title';
 import ProjectImg from '../Image/ProjectImg';
 
-const Projects = () => {
-  const { projects } = useContext(PortfolioContext);
+// eslint-disable-next-line no-unused-vars
+const WorkExp = () => {
+  // eslint-disable-next-line no-shadow
+  const { workexp } = useContext(PortfolioContext);
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -26,8 +28,8 @@ const Projects = () => {
     <section id="projects">
       <Container>
         <div className="project-wrapper">
-          <Title title="Projects" />
-          {projects.map((project) => {
+          <Title title="Work Experience" />
+          {workexp.map((project) => {
             const { title, info, info2, url, img, id } = project;
 
             return (
@@ -97,4 +99,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default WorkExp;
